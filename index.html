@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Letterschool</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="wrapper" id="start_page">
+        <div class="slider__wrapper">
+          <div class="slider__block">
+            <div class="slide__block">
+              <picture>
+                <source
+                  class="slide__img"
+                  type="image/jpg"
+                  media="(min-width: 425px)"
+                  srcset="imgs/slide_1.jpg 2x, imgs/slide_1.jpg 1x"
+                />
+                <source
+                  class="slide__img"
+                  type="image/jpg"
+                  media="(min-width: 0)"
+                  srcset="imgs/slide_min_1.jpg"
+                />
+                <source
+                  class="slide__img"
+                  type="image/webp"
+                  media="(min-width: 425px)"
+                  srcset="imgs/slide_1.webp 2x, imgs/slide_1.webp 1x"
+                />
+                <source
+                  class="slide__img"
+                  type="image/webp"
+                  media="(min-width: 0)"
+                  srcset="imgs/slide_min_1.webp"
+                />
+                <img src="imgs/slide_1.jpg" alt="" class="slide__img" />
+              </picture>
+              <p class="slider__title">
+                Letterschool: a proven method to improve your kid's reading and writing skills
+              </p>
+            </div>
+            <div class="slide__block">
+              <picture>
+                <source
+                  class="slide__img"
+                  type="image/jpg"
+                  media="(min-width: 425px)"
+                  srcset="imgs/slide_2.jpg 2x, imgs/slide_2.jpg 1x"
+                />
+                <source
+                  class="slide__img"
+                  type="image/jpg"
+                  media="(min-width: 0)"
+                  srcset="imgs/slide_min_2.jpg"
+                />
+                <source
+                  class="slide__img"
+                  type="image/webp"
+                  media="(min-width: 425px)"
+                  srcset="imgs/slide_2.webp 2x, imgs/slide_2.webp 1x"
+                />
+                <source
+                  class="slide__img"
+                  type="image/webp"
+                  media="(min-width: 0)"
+                  srcset="imgs/slide_min_2.webp"
+                />
+                <img src="imgs/slide_1.jpg" alt="" class="slide__img" />
+              </picture>
+              <p class="slider__title">Learn your kids to write 20% faster with Letterschool</p>
+            </div>
+            <div class="slide__block">
+              <picture>
+                <source
+                  class="slide__img"
+                  type="image/jpg"
+                  media="(min-width: 425px)"
+                  srcset="imgs/slide_3.jpg 2x, imgs/slide_3.jpg 1x"
+                />
+                <source
+                  class="slide__img"
+                  type="image/jpg"
+                  media="(min-width: 0)"
+                  srcset="imgs/slide_min_3.jpg"
+                />
+                <source
+                  class="slide__img"
+                  type="image/webp"
+                  media="(min-width: 425px)"
+                  srcset="imgs/slide_3.webp 2x, imgs/slide_3.webp 1x"
+                />
+                <source
+                  class="slide__img"
+                  type="image/webp"
+                  media="(min-width: 0)"
+                  srcset="imgs/slide_min_3.webp"
+                />
+                <img src="imgs/slide_1.jpg" alt="" class="slide__img" />
+              </picture>
+              <p class="slider__title">Enjoyed by more than 10 million kids around the world</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__block">
+          <div class="button__wrapper full__width__btn">
+            <button class="app__btn">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script>
+      $(".slider__block").slick({
+        infinity: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false,
+        slidesToScroll: 1,
+        dots: true,
+      });
+    </script>
+  </body>
+</html>
