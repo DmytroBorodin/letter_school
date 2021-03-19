@@ -82,6 +82,125 @@ html {
   position: relative;
 }
 
+.wrapper.disabled {
+  display: none;
+}
+
+.header__block {
+  padding: 5.8rem 0 0 1.6rem;
+}
+
+.main__block {
+  width: 100%;
+  max-width: 64rem;
+  padding: 0 1.6rem;
+  margin: 0 auto 0;
+}
+
+.current__page__block {
+  margin-top: 3.05rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 2rem;
+  line-height: 1.9;
+  font-weight: 700;
+  color: #e5e4e7;
+}
+
+.current__page {
+  color: #5a5a5a;
+  margin-right: 0.3rem;
+  line-height: inherit;
+}
+
+.pages {
+  margin-left: 0.3rem;
+  line-height: inherit;
+}
+
+.progress__bar__block {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background-color: #e5e4e7;
+}
+
+.progress__bar {
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: #099ff9;
+}
+
+.page__title__block {
+  margin-top: 5.6rem;
+}
+
+.page__title,
+.page__text {
+  text-align: center;
+}
+
+.page__title {
+  font-size: 2.2rem;
+  line-height: 1.36;
+  font-weight: 700;
+}
+
+.page__text {
+  margin-top: 3.4rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.input__block {
+  margin-top: 8.1rem;
+}
+
+.name__input {
+  width: 100%;
+  padding: 0 3.5rem;
+  height: 8rem;
+  font-size: 2.2rem;
+  line-height: 1.273;
+  font-weight: 700;
+  color: #099ff9;
+  border: 0.3rem solid #e5e4e7;
+  border-radius: 3rem;
+}
+
+.name__input:focus {
+  border: 0.3rem solid #099ff9;
+}
+
+.name__input::-webkit-input-placeholder {
+  color: #e5e4e7;
+}
+
+.name__input:-ms-input-placeholder {
+  color: #e5e4e7;
+}
+
+.name__input::-ms-input-placeholder {
+  color: #e5e4e7;
+}
+
+.name__input::-webkit-input-placeholder {
+  color: #e5e4e7;
+}
+
+.name__input::placeholder {
+  color: #e5e4e7;
+}
+
 .footer__block {
   position: absolute;
   bottom: 0;
@@ -91,9 +210,17 @@ html {
   padding-bottom: 7rem;
 }
 
+.footer__block .main__block {
+  margin-bottom: 0;
+}
+
 .button__wrapper {
   position: relative;
   height: 6.9rem;
+  width: 19rem;
+  margin-left: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .button__wrapper:before {
@@ -110,16 +237,19 @@ html {
 .button__wrapper.full__width__btn {
   width: 56.8rem;
   margin: auto;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .button__wrapper.full__width__btn .app__btn {
+  width: 100%;
   font-size: 2.2rem;
 }
 
 .app__btn {
   position: relative;
   height: 100%;
-  width: 100%;
+  width: 19rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,6 +266,195 @@ html {
   border-radius: 3.45rem;
   border-top: none;
   z-index: 1;
+}
+
+.app__btn.clicked {
+  top: 0.4rem;
+}
+
+.back__btn {
+  width: 0.75rem;
+}
+
+.back__btn img {
+  width: 100%;
+}
+
+.age__btns__block {
+  width: 100%;
+  max-width: 46.5rem;
+  margin: 4.45rem auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.age__btn {
+  width: 13rem;
+  height: 12rem;
+  margin: 1.25rem;
+  position: relative;
+}
+
+.age__btn span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.8rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  border: 0.3rem solid #e5e4e7;
+  border-radius: 3rem;
+  z-index: 2;
+}
+
+.age__btn:focus span {
+  background-color: #099ff9;
+  border: 0.3rem solid #099ff9;
+  height: 11.6rem;
+  color: #fff;
+}
+
+.age__btn:focus:after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 12rem;
+  border-radius: 3rem;
+  background-color: #0a86d1;
+  z-index: 1;
+}
+
+.age__btn.active span {
+  height: 100%;
+}
+
+.choose_language__wrap {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  margin-top: 5.7rem;
+  overflow-y: auto;
+}
+
+.choose_language__wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.choose__language__block {
+  width: 100%;
+  margin-bottom: 15rem;
+  padding: 1rem 2rem;
+  border: 0.3rem solid #e5e4e7;
+  border-radius: 2rem;
+}
+
+.language__block {
+  width: 100%;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.language__block.selected {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.language__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.language__icon {
+  width: 8rem;
+  height: 6rem;
+  margin-right: 2rem;
+  border-radius: 1rem;
+  background-color: #f1f1f1;
+}
+
+.language__name {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.questions__block {
+  width: 100%;
+  max-width: 44.8rem;
+  margin: 13.6rem auto 0;
+}
+
+.question {
+  width: 100%;
+  height: 10rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.question.selected .question__text {
+  height: calc(100% - 0.4rem);
+  background-color: #099ff9;
+  border: 0.3rem solid #099ff9;
+  color: #fff;
+}
+
+.question.selected:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  top: 0;
+  left: 0;
+  background-color: #0a86d1;
+  z-index: 1;
+}
+
+.question__text {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2.4rem 3rem 0;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  border-radius: 2rem;
+  border: 0.3rem solid #e5e4e7;
+  z-index: 2;
 }
 
 .slider__wrapper {
@@ -222,7 +541,13 @@ html {
   background-color: #099ff9;
 }
 
-@media screen and (max-height: 1025px) and (min-width: 769px) {
+@media screen and (min-height: 1200px) {
+  .choose__language__block {
+    margin-bottom: 8rem;
+  }
+}
+
+@media screen and (max-height: 1025px) and (min-width: 850px) {
   .slider__block {
     width: 100%;
     height: 70%;
@@ -231,9 +556,14 @@ html {
     width: 70%;
     margin: auto;
   }
+  .questions__block {
+    width: 100%;
+    max-width: 44.8rem;
+    margin: 2.6rem auto 0;
+  }
 }
 
-@media screen and (max-height: 769px) and (min-width: 601px) {
+@media screen and (max-height: 850px) and (min-width: 601px) {
   .slider__block {
     width: 100%;
     height: 56%;
@@ -241,6 +571,15 @@ html {
   .slide__img {
     width: 50%;
     margin: auto;
+  }
+  .age__btns__block {
+    margin-top: 2.2rem;
+  }
+  .choose_language__wrap {
+    max-height: 43vh;
+  }
+  .choose__language__block {
+    margin-bottom: 7rem;
   }
 }
 
@@ -267,6 +606,9 @@ html {
     font-size: 2.3rem;
     border-radius: 2.6rem;
   }
+  .app__btn.clicked {
+    top: 0.3rem;
+  }
 }
 
 @media screen and (max-width: 525px) {
@@ -275,6 +617,24 @@ html {
   }
   .slider__title {
     height: 30%;
+  }
+  .age__btns__block {
+    width: 33rem;
+  }
+  .age__btn {
+    width: 9rem;
+    height: 8.5rem;
+    margin: 1rem;
+  }
+  .age__btn span {
+    font-size: 2.2rem;
+  }
+  .age__btn:focus span {
+    height: 8.7rem;
+    color: #fff;
+  }
+  .age__btn:focus:after {
+    height: 9rem;
   }
 }
 
@@ -285,6 +645,65 @@ html {
   .slider__title {
     width: 31.1rem;
     height: 27.76%;
+  }
+  .current__page__block {
+    margin-top: 2.15rem;
+    font-size: 1.6rem;
+  }
+  .page__title__block {
+    margin-top: 4rem;
+  }
+  .page__text {
+    margin-top: 2.4rem;
+    font-weight: 400;
+  }
+  .input__block {
+    margin-top: 2.7rem;
+  }
+  .name__input {
+    padding: 0 2rem;
+    height: 5.5rem;
+    font-size: 1.6rem;
+    line-height: 1.375;
+  }
+  .button__wrapper {
+    width: 15rem;
+  }
+  .app__btn {
+    width: 15rem;
+    font-size: 1.6rem;
+  }
+  .choose_language__wrap {
+    margin-top: 2.7rem;
+  }
+  .choose__language__block {
+    width: 100%;
+    padding: 0.9rem 1.8rem;
+    margin-bottom: 8rem;
+  }
+  .language__block {
+    padding: 0.9rem 0;
+  }
+  .language__icon {
+    width: 7rem;
+    height: 5rem;
+  }
+  .language__name {
+    font-size: 1.6rem;
+  }
+  .questions__block {
+    margin: 9.6rem auto 0;
+  }
+  .question {
+    height: 8.2rem;
+  }
+  .question.selected .question__text {
+    height: calc(100% - 0.3rem);
+  }
+  .question__text {
+    padding: 2rem 2rem 0;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
   }
 }
 
@@ -298,6 +717,12 @@ html {
   .slider__title {
     height: 22.76%;
   }
+  .choose_language__wrap {
+    max-height: 50vh;
+  }
+  .questions__block {
+    margin: 7.6rem auto 0;
+  }
 }
 
 @media screen and (min-width: 568px) and (max-height: 415px) {
@@ -308,6 +733,9 @@ html {
     padding-top: 90%;
     margin-bottom: 15rem;
   }
+  .main__block {
+    margin-bottom: 15rem;
+  }
   .slider__block {
     height: 100%;
   }
@@ -316,6 +744,18 @@ html {
   }
   .slider__title {
     height: 25.76%;
+  }
+  #page_three .main__block {
+    margin-bottom: 10rem;
+  }
+  #page_three .footer__block .main__block {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 375px) and (min-height: 750px) and (max-width: 767px) {
+  .choose__language__block {
+    margin-bottom: 15rem;
   }
 }
 
@@ -337,6 +777,31 @@ html {
     font-size: 1.8rem;
     border-radius: 2.3rem;
   }
+  .app__btn.clicked {
+    top: 0.2rem;
+  }
+  .age__btns__block {
+    margin-top: 2rem;
+    width: 29rem;
+  }
+  .age__btn {
+    width: 8rem;
+    height: 7.3rem;
+    margin: 0.83rem;
+  }
+  .age__btn span {
+    font-size: 2rem;
+  }
+  .age__btn:focus span {
+    height: 7.1rem;
+    color: #fff;
+  }
+  .age__btn:focus:after {
+    height: 7.3rem;
+  }
+  .choose_language__wrap {
+    max-height: 35vh;
+  }
   .slider__title {
     font-size: 1.4rem;
   }
@@ -351,6 +816,14 @@ html {
   .slick-dots li.slick-active {
     width: 1.4rem;
     height: 1.4rem;
+  }
+  .questions__block {
+    margin: 4.6rem auto 0;
+    height: 30vh;
+    overflow-y: auto;
+  }
+  .questions__block::-webkit-scrollbar {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
