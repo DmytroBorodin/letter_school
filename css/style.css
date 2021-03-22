@@ -754,6 +754,16 @@ html {
   }
 }
 
+@media screen and (max-height: 690px) and (max-width: 415px) {
+  .questions__block {
+    height: 30vh;
+    overflow-y: scroll;
+  }
+  .questions__block::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 375px) and (min-height: 750px) and (max-width: 767px) {
   .choose__language__block {
     margin-bottom: 15rem;

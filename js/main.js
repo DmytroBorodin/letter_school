@@ -7,19 +7,6 @@ let pageCounters = [...document.querySelectorAll(".pages")];
 let barProgress = 100 / progressBars.length;
 let wrap = document.querySelector(".wrap");
 
-function windowHeight() {
-  let wH = window.innerHeight;
-  wrap.style.height = `${wH}px`;
-}
-
-window.addEventListener("resize", () => {
-  if (window.innerHeight > 415) {
-    windowHeight();
-  } else {
-    wrap.style.height = `auto`;
-  }
-});
-
 appBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     let btnIndex = appBtns.indexOf(btn);
