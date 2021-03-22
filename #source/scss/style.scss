@@ -353,6 +353,7 @@ html {
   height: 10rem;
   position: relative;
   margin-bottom: 2rem;
+  cursor: pointer;
   &.selected {
     .question__text {
       height: calc(100% - 0.4rem);

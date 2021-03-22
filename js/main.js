@@ -5,6 +5,20 @@ let pageNums = [...document.querySelectorAll(".current__page")];
 let progressBars = [...document.querySelectorAll(".progress__bar")];
 let pageCounters = [...document.querySelectorAll(".pages")];
 let barProgress = 100 / progressBars.length;
+let wrap = document.querySelector(".wrap");
+
+function windowHeight() {
+  let wH = window.innerHeight;
+  wrap.style.height = `${wH}px`;
+}
+
+window.addEventListener("resize", () => {
+  if (window.innerHeight > 415) {
+    windowHeight();
+  } else {
+    wrap.style.height = `auto`;
+  }
+});
 
 appBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
