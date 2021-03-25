@@ -12,6 +12,7 @@
   <body>
     <div class="wrap">
       <!-- Start app page -->
+
       <div class="wrapper" id="start_page">
         <div class="slider__wrapper">
           <div class="slider__block">
@@ -110,8 +111,8 @@
           </div>
         </div>
         <div class="footer__block">
-          <div class="button__wrapper full__width__btn">
-            <button class="app__btn">Get Started</button>
+          <div class="button__wrapper primary colorized full__width__btn">
+            <button class="app__btn primary colorized">Get Started</button>
           </div>
         </div>
       </div>
@@ -130,7 +131,7 @@
             <span class="pages">6</span>
           </div>
           <div class="progress__bar__block">
-            <div class="progress__bar"></div>
+            <div class="progress__bar colorized primary"></div>
           </div>
           <div class="page__title__block">
             <h2 class="page__title">What's your child's name?</h2>
@@ -143,7 +144,7 @@
               <input
                 type="text"
                 placeholder="Add name"
-                class="name__input"
+                class="name__input colorized primary"
                 id="child__name__input"
               />
             </form>
@@ -151,8 +152,8 @@
         </div>
         <div class="footer__block">
           <div class="main__block">
-            <div class="button__wrapper">
-              <button class="app__btn">Next</button>
+            <div class="button__wrapper primary colorized">
+              <button class="app__btn primary colorized">Next</button>
             </div>
           </div>
         </div>
@@ -172,25 +173,25 @@
             <span class="pages"></span>
           </div>
           <div class="progress__bar__block">
-            <div class="progress__bar"></div>
+            <div class="progress__bar colorized primary"></div>
           </div>
           <div class="page__title__block">
             <h2 class="page__title">How old is <span class="child__name"></span> ?</h2>
             <p class="page__text">Help us personalize your child's learning journey!</p>
           </div>
           <div class="age__btns__block">
-            <button class="age__btn colorized active" tabindex="1"><span>1</span></button>
-            <button class="age__btn colorized" tabindex="2"><span>2</span></button>
-            <button class="age__btn colorized" tabindex="3"><span>3</span></button>
-            <button class="age__btn colorized" tabindex="4"><span>4</span></button>
-            <button class="age__btn colorized" tabindex="5"><span>5</span></button>
-            <button class="age__btn colorized" tabindex="6"><span>6+</span></button>
+            <button class="age__btn colorized active primary" tabindex="1"><span>1</span></button>
+            <button class="age__btn colorized primary" tabindex="2"><span>2</span></button>
+            <button class="age__btn colorized primary" tabindex="3"><span>3</span></button>
+            <button class="age__btn colorized primary" tabindex="4"><span>4</span></button>
+            <button class="age__btn colorized primary" tabindex="5"><span>5</span></button>
+            <button class="age__btn colorized primary" tabindex="6"><span>6+</span></button>
           </div>
         </div>
         <div class="footer__block">
           <div class="main__block">
-            <div class="button__wrapper">
-              <button class="app__btn" tabindex="7">Next</button>
+            <div class="button__wrapper primary colorized">
+              <button class="app__btn primary colorized" tabindex="7">Next</button>
             </div>
           </div>
         </div>
@@ -210,7 +211,7 @@
             <span class="pages"></span>
           </div>
           <div class="progress__bar__block">
-            <div class="progress__bar"></div>
+            <div class="progress__bar colorized primary"></div>
           </div>
           <div class="page__title__block">
             <h2 class="page__title">Choose a learning language</h2>
@@ -295,8 +296,8 @@
         </div>
         <div class="footer__block">
           <div class="main__block">
-            <div class="button__wrapper">
-              <button class="app__btn">Next</button>
+            <div class="button__wrapper primary colorized">
+              <button class="app__btn primary colorized">Next</button>
             </div>
           </div>
         </div>
@@ -316,24 +317,24 @@
             <span class="pages"></span>
           </div>
           <div class="progress__bar__block">
-            <div class="progress__bar"></div>
+            <div class="progress__bar colorized primary"></div>
           </div>
           <div class="page__title__block">
             <h2 class="page__title">What's <span class="child__name"></span>'s learning level?</h2>
           </div>
           <div class="questions__block">
             <div class="question colorized">
-              <p class="question__text">
+              <p class="question__text colorized">
                 <span class="child__name"></span> is a beginner and can't recognize letters yet
               </p>
             </div>
             <div class="question colorized">
-              <p class="question__text">
+              <p class="question__text colorized">
                 <span class="child__name"></span> can recognize some letters and words
               </p>
             </div>
             <div class="question colorized">
-              <p class="question__text">
+              <p class="question__text colorized">
                 <span class="child__name"></span> can recognize simple words and phrases
               </p>
             </div>
@@ -341,8 +342,8 @@
         </div>
         <div class="footer__block">
           <div class="main__block">
-            <div class="button__wrapper">
-              <button class="app__btn">Next</button>
+            <div class="button__wrapper primary colorized">
+              <button class="app__btn primary colorized">Next</button>
             </div>
           </div>
         </div>
@@ -362,24 +363,38 @@
             <span class="pages"></span>
           </div>
           <div class="progress__bar__block">
-            <div class="progress__bar"></div>
+            <div class="progress__bar colorized primary"></div>
           </div>
           <div class="page__title__block">
-            <h2 class="page__title">What's your child's name?</h2>
-            <p class="page__text">
-              Help us personalize your child's learning journey! Add your child's name here.
-            </p>
+            <h2 class="page__title">
+              Choose the color <span class="child__name"></span> loves to learn with
+            </h2>
           </div>
-          <div class="input__block">
-            <form action="">
-              <input type="text" placeholder="Add name" class="name__input" />
-            </form>
+          <div class="color__btns__block">
+            <button data-color="yellow" class="color__btn colorized yellow">
+              <span class="color__name colorized yellow"> Yellow </span>
+            </button>
+            <button data-color="primary" class="color__btn colorized primary">
+              <span class="color__name colorized primary"> Blue </span>
+            </button>
+            <button data-color="green" class="color__btn colorized green">
+              <span class="color__name colorized green"> Green </span>
+            </button>
+            <button data-color="red" class="color__btn colorized red">
+              <span class="color__name colorized red"> Red </span>
+            </button>
+            <button data-color="pink" class="color__btn colorized pink">
+              <span class="color__name colorized pink"> Pink </span>
+            </button>
+            <button data-color="purple" class="color__btn colorized purple">
+              <span class="color__name colorized purple"> Purple </span>
+            </button>
           </div>
         </div>
         <div class="footer__block">
           <div class="main__block">
-            <div class="button__wrapper">
-              <button class="app__btn">Next</button>
+            <div class="button__wrapper primary colorized">
+              <button class="app__btn primary colorized">Next</button>
             </div>
           </div>
         </div>
@@ -399,29 +414,217 @@
             <span class="pages"></span>
           </div>
           <div class="progress__bar__block">
-            <div class="progress__bar"></div>
+            <div class="progress__bar colorized primary"></div>
           </div>
           <div class="page__title__block">
-            <h2 class="page__title">What's your child's name?</h2>
-            <p class="page__text">
-              Help us personalize your child's learning journey! Add your child's name here.
-            </p>
+            <h2 class="page__title">How often do you want your kid to learn new letters?</h2>
           </div>
-          <div class="input__block">
-            <form action="">
-              <input type="text" placeholder="Add name" class="name__input" />
-            </form>
+          <div class="timer__block">
+            <button class="timer__btn colorized primary">
+              <span class="timer__name colorized primary"> 5 min / day </span>
+            </button>
+            <button class="timer__btn colorized primary">
+              <span class="timer__name colorized primary"> 10 min / day </span>
+            </button>
+            <button class="timer__btn colorized primary">
+              <span class="timer__name colorized primary"> 15 min / day </span>
+            </button>
+            <button class="timer__btn colorized primary">
+              <span class="timer__name colorized primary"> 20 min / day </span>
+            </button>
           </div>
         </div>
         <div class="footer__block">
           <div class="main__block">
-            <div class="button__wrapper">
-              <button class="app__btn">Next</button>
+            <div class="button__wrapper primary colorized">
+              <button class="app__btn primary colorized">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start seventh page -->
+
+      <div class="wrapper disabled" id="page_seven">
+        <div class="header__block">
+          <button class="back__btn">
+            <img src="imgs/back_arrow.svg" alt="" />
+          </button>
+        </div>
+        <div class="main__block">
+          <div class="page__title__block">
+            <h2 class="page__title">
+              <span class="child__name"></span> learning journey is being created...
+            </h2>
+          </div>
+          <div class="animation__block">
+            <svg class="circle__animation">
+              <circle
+                class="bg__circle"
+                cx="150"
+                cy="150"
+                stroke-width="20"
+                stroke="#F1F1F1"
+                r="130"
+                fill="transparent"
+              ></circle>
+              <circle
+                class="circle__animation__c colorized primary"
+                cx="150"
+                cy="150"
+                stroke-width="20"
+                stroke="blue"
+                r="130"
+                fill="transparent"
+                stroke-linecap="round"
+              ></circle>
+              <span class="percentages colorized primary">30%</span>
+            </svg>
+          </div>
+        </div>
+        <div class="footer__block">
+          <div class="main__block">
+            <div class="button__wrapper primary colorized">
+              <button class="app__btn primary colorized">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start eighth page -->
+
+      <div class="wrapper disabled" id="page_eight">
+        <div class="header__block">
+          <button class="back__btn">
+            <img src="imgs/back_arrow.svg" alt="" />
+          </button>
+        </div>
+        <div class="main__block">
+          <div class="page__title__block">
+            <h2 class="page__title">
+              <span class="child__name"></span>'s learning journey is being created...
+            </h2>
+          </div>
+          <div class="levels__block">
+            <div class="levels">
+              <span class="level__name">Toddler</span>
+              <span class="level__name">Preschool</span>
+              <span class="level__name">Pre-K</span>
+              <span class="level__name active">Early Learner</span>
+              <span class="level__name">Growing Learner</span>
+            </div>
+            <div class="level__progress__block">
+              <div class="level__progress__bar primary colorized">
+                <div class="level__progress__thumb primary colorized"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__block">
+          <div class="main__block">
+            <div class="button__wrapper primary colorized">
+              <button class="app__btn primary colorized">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start ninth page -->
+
+      <div class="wrapper disabled" id="page_nine">
+        <div class="header__block">
+          <button class="back__btn">
+            <img src="imgs/white_arrow.svg" alt="" />
+          </button>
+        </div>
+        <div class="main__block">
+          <div class="page__title__block">
+            <h2 class="page__title">Choose a plan for after your 7-day free trial</h2>
+          </div>
+          <div class="plans__block">
+            <div class="plan__wrapper">
+              <div class="plan__block">
+                <div class="period__block">
+                  <span class="monthes main__text">1</span>
+                  <span class="main__text">Month</span>
+                </div>
+                <div class="price__block">
+                  <span class="prev__rice main__text disabled"></span>
+                  <span class="actual__price main__text">$4.99 / mo.</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan__wrapper active most__chosen">
+              <div class="plan__block">
+                <div class="plan__header">
+                  <span class="main__text">Most Chosen</span>
+                </div>
+                <div class="period__block">
+                  <span class="monthes main__text">6</span>
+                  <span class="main__text">Monthes</span>
+                </div>
+                <div class="price__block">
+                  <span class="prev__rice disabled main__text">$29.94</span>
+                  <span class="actual__price main__text">$24.99</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan__wrapper">
+              <div class="plan__block">
+                <div class="period__block">
+                  <span class="monthes main__text">12</span>
+                  <span class="main__text">Monthes</span>
+                </div>
+                <div class="price__block">
+                  <span class="prev__rice main__text disabled">$59.88</span>
+                  <span class="actual__price main__text">$44.99 / yr</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__block">
+          <div class="main__block">
+            <p class="footer__text">Cancel anytime in the App Store</p>
+            <div class="button__wrapper primary full__width__btn">
+              <button class="app__btn primary">Get Started</button>
+            </div>
+            <button class="cancel__btn">
+              <p class="footer__text">No Thanks</p>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start tenth page -->
+
+      <div class="wrapper disabled" id="page_ten">
+        <div class="header__block">
+          <button class="back__btn">
+            <img src="imgs/white_arrow.svg" alt="" />
+          </button>
+        </div>
+        <div class="main__block">
+          <div class="main__img__block">
+            <img src="" alt="" class="main__img" />
+          </div>
+          <div class="page__title__block">
+            <h2 class="page__title">
+              Now it's time for <span class="child__name"></span> to learn some new letters! Let's
+              start with his first letter, <span class="child__name__start__letter"></span>!
+            </h2>
+          </div>
+        </div>
+        <div class="footer__block">
+          <div class="main__block">
+            <div class="button__wrapper primary full__width__btn">
+              <button class="app__btn primary">Start Learning Journey</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <script
       src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
       integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
