@@ -1063,9 +1063,13 @@ input.purple:focus {
   border: 0.3rem solid #099ff9;
 }
 
-.plan__wrapper.active .plan__header {
-  border-top-left-radius: 1.1rem;
-  border-top-right-radius: 1.1rem;
+.plan__wrapper.active .plan__body {
+  border: 0.3rem solid #099ff9;
+  border-top: none;
+}
+
+.plan__wrapper.active.most__chosen .plan__block {
+  border: none;
 }
 
 .plan__wrapper:after {
@@ -1077,8 +1081,8 @@ input.purple:focus {
   height: 100%;
   z-index: 1;
   display: block;
-  background-color: rgba(255, 255, 255, 0.35);
   border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .plan__block {
@@ -1115,12 +1119,33 @@ input.purple:focus {
       -ms-flex-align: center;
           align-items: center;
   background-color: #099ff9;
+  border: 0.3rem solid #099ff9;
+  border-bottom: none;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
 }
 
 .plan__header .main__text {
   color: #fff;
+}
+
+.plan__body {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  border: 0.3rem solid transparent;
+  background-color: #fff;
 }
 
 .period__block {
@@ -1818,7 +1843,7 @@ input.purple:focus {
     height: 15.1rem;
   }
   .plan__wrapper.most__chosen .period__block {
-    margin-top: 1.4rem;
+    margin-top: 0.9rem;
   }
   .plan__block {
     border-radius: 1.5rem;
