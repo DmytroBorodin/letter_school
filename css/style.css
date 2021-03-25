@@ -511,7 +511,7 @@ input.purple:focus {
 }
 
 .age__btn.selected span {
-  height: 11.6rem;
+  height: calc(100% - 0.4rem);
   color: #fff;
 }
 
@@ -521,7 +521,7 @@ input.purple:focus {
   width: 100%;
   position: absolute;
   top: 0;
-  height: 12rem;
+  height: 100%;
   border-radius: 3rem;
   z-index: 1;
 }
@@ -1505,12 +1505,9 @@ input.purple:focus {
   .age__btn span {
     font-size: 2.2rem;
   }
-  .age__btn:focus span {
-    height: 8.7rem;
+  .age__btn.selected span {
+    height: calc(100% - 0.3rem);
     color: #fff;
-  }
-  .age__btn:focus:after {
-    height: 9rem;
   }
   .color__btn {
     width: 10.767rem;
@@ -1773,12 +1770,9 @@ input.purple:focus {
   .age__btn span {
     font-size: 2rem;
   }
-  .age__btn:focus span {
-    height: 7.1rem;
+  .age__btn.selected span {
+    height: calc(100% - 0.2rem);
     color: #fff;
-  }
-  .age__btn:focus:after {
-    height: 7.3rem;
   }
   .choose_language__wrap {
     max-height: 35vh;
