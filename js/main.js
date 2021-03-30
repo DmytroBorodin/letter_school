@@ -1,5 +1,6 @@
 let pages = [...document.querySelectorAll(".wrapper")];
 let appBtns = [...document.querySelectorAll(".app__btn")];
+let appBtnsWraps = [...document.querySelectorAll(".button__wrapper")];
 let slickDotsUl = null;
 let dotsArr = [];
 let backBtns = [...document.querySelectorAll(".back__btn")];
@@ -9,6 +10,7 @@ let pageCounters = [...document.querySelectorAll(".pages")];
 let barProgress = 100 / progressBars.length;
 let wrap = document.querySelector(".wrap");
 let colorizedItems = [...document.querySelectorAll(".colorized")];
+let currentPageNumber = null;
 
 document.addEventListener("DOMContentLoaded", function () {
   slickDotsUl = document.querySelector(".slick-dots");
@@ -22,12 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
 appBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     let btnIndex = appBtns.indexOf(btn);
-    btnIndex === appBtns.length - 1
-      ? false
-      : pages.forEach((page) => {
-          page.classList.add("disabled");
-          pages[btnIndex + 1].classList.remove("disabled");
-        });
+    currentPageNumber = btnIndex + 1;
+    if (!appBtnsWraps[btnIndex].classList.contains("disabled")) {
+      btnIndex === appBtns.length - 1
+        ? false
+        : pages.forEach((page) => {
+            page.classList.add("disabled");
+            pages[btnIndex + 1].classList.remove("disabled");
+          });
+    } else {
+      return;
+    }
   });
   btn.addEventListener("mousedown", (event) => {
     event.path[0].classList.add("clicked");
@@ -61,6 +68,7 @@ progressBars.forEach((bar) => {
 pageCounters.forEach((counter) => {
   counter.innerText = pageCounters.length;
 });
+console.log(pageCounters);
 
 let childNameInput = document.getElementById("child__name__input");
 let childNameBlocks = [...document.querySelectorAll(".child__name")];
@@ -75,10 +83,15 @@ childNameInput.addEventListener("focusout", (e) => {
     block.innerText = e.target.value;
   });
 });
+childNameInput.addEventListener("input", (e) => {
+  console.log(currentPageNumber);
+  e.target.value === "" ? false : appBtnsWraps[currentPageNumber].classList.remove("disabled");
+});
 
 // second page settings
 
 let ageBtns = [...document.querySelectorAll(".age__btn")];
+let pageNum = +document.querySelector(".current__page").innerText;
 ageBtns.forEach((btn) => {
   btn.addEventListener("mousedown", () => {
     btn.classList.add("active");
@@ -91,6 +104,7 @@ ageBtns.forEach((btn) => {
       btn.classList.remove("selected");
     });
     btn.classList.add("selected");
+    appBtnsWraps[currentPageNumber].classList.remove("disabled");
   });
 });
 
@@ -126,9 +140,15 @@ function toggleQuestionClasses(item) {
 
 qaBlocks.forEach((block) => {
   block.addEventListener("click", () => {
+    qaBlocks.forEach((qaBlock) => {
+      qaBlock.classList.remove("selected");
+      let blockText = qaBlock.querySelector(".question__text");
+      blockText.classList.remove("selected");
+    });
     let blockText = block.querySelector(".question__text");
     toggleQuestionClasses(block);
     toggleQuestionClasses(blockText);
+    appBtnsWraps[currentPageNumber].classList.remove("disabled");
   });
 });
 
@@ -176,6 +196,20 @@ changeColorBtns.forEach((btn) => {
     });
     prevColorClassesCopy = [...prevColorClasses];
     prevColorClasses.splice(0, 1);
+  });
+});
+
+// page six settings
+
+let timerBtns = [...document.querySelectorAll(".timer__btn")];
+
+timerBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    timerBtns.forEach((btn) => {
+      btn.classList.remove("selected");
+    });
+    btn.classList.add("selected");
+    appBtnsWraps[currentPageNumber].classList.remove("disabled");
   });
 });
 

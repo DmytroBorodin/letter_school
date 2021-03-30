@@ -227,6 +227,9 @@ input {
 
 .header__block {
   padding: 5.8rem 0 0 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 // main block settings
@@ -238,7 +241,6 @@ input {
   margin: 0 auto 0;
 }
 .current__page__block {
-  margin-top: 3.05rem;
   display: flex;
   justify-content: flex-end;
   font-size: 2rem;
@@ -360,6 +362,15 @@ input {
       font-size: 2.2rem;
     }
   }
+  &.disabled {
+    opacity: 40%;
+    &:before {
+      opacity: 40%;
+    }
+    .app__btn {
+      opacity: 40%;
+    }
+  }
 }
 .app__btn {
   position: relative;
@@ -433,6 +444,9 @@ input {
       z-index: 1;
     }
   }
+}
+.age__btn.selected,
+.timer__btn.selected {
   &.primary.selected {
     span {
       background-color: #099ff9;
@@ -475,7 +489,6 @@ input {
     }
   }
 }
-
 // third page settings
 
 .choose_language__wrap {
@@ -647,9 +660,12 @@ input {
   height: 14.6rem;
   margin: 0 1.25rem 2.9rem;
   border-radius: 3rem;
-  &.colorized {
+  background: transparent;
+
+  &.selected {
     .timer__name {
       height: calc(100% - 0.4rem);
+      color: #fff;
     }
     &:after {
       content: "";
@@ -678,6 +694,8 @@ input {
   align-items: center;
   font-size: 2.1rem;
   font-weight: 700;
+  border: 0.3rem solid #e5e4e7;
+  color: #3d3d5c;
 }
 
 // seventh page settingth
@@ -718,7 +736,7 @@ input {
   left: 0;
   z-index: 2;
   transform-origin: center;
-  transform: rotate(-60deg);
+  transform: rotate(-90deg);
   stroke-dasharray: 500;
 }
 .percentages {
@@ -800,6 +818,15 @@ input {
   height: 100%;
   position: relative;
   border-radius: 0.5rem;
+  animation: calcProgress 1s linear;
+}
+@keyframes calcProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
 }
 .level__progress__thumb {
   position: absolute;
@@ -1346,7 +1373,6 @@ input {
 
   // main block settings
   .current__page__block {
-    margin-top: 2.15rem;
     font-size: 1.6rem;
   }
   .page__title__block {

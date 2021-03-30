@@ -279,6 +279,15 @@ input.purple:focus {
 
 .header__block {
   padding: 5.8rem 0 0 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main__block {
@@ -289,7 +298,6 @@ input.purple:focus {
 }
 
 .current__page__block {
-  margin-top: 3.05rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,6 +440,18 @@ input.purple:focus {
   font-size: 2.2rem;
 }
 
+.button__wrapper.disabled {
+  opacity: 40%;
+}
+
+.button__wrapper.disabled:before {
+  opacity: 40%;
+}
+
+.button__wrapper.disabled .app__btn {
+  opacity: 40%;
+}
+
 .app__btn {
   position: relative;
   height: 100%;
@@ -526,37 +546,44 @@ input.purple:focus {
   z-index: 1;
 }
 
-.age__btn.primary.selected span {
+.age__btn.selected.primary.selected span,
+.timer__btn.selected.primary.selected span {
   background-color: #099ff9;
   border-color: #099ff9;
 }
 
-.age__btn.yellow.selected span {
+.age__btn.selected.yellow.selected span,
+.timer__btn.selected.yellow.selected span {
   background-color: #f9c700;
   border-color: #f9c700;
 }
 
-.age__btn.green.selected span {
+.age__btn.selected.green.selected span,
+.timer__btn.selected.green.selected span {
   background-color: #09bd00;
   border-color: #09bd00;
 }
 
-.age__btn.red.selected span {
+.age__btn.selected.red.selected span,
+.timer__btn.selected.red.selected span {
   background-color: #ff1800;
   border-color: #ff1800;
 }
 
-.age__btn.pink.selected span {
+.age__btn.selected.pink.selected span,
+.timer__btn.selected.pink.selected span {
   background-color: #e965d3;
   border-color: #e965d3;
 }
 
-.age__btn.purple.selected span {
+.age__btn.selected.purple.selected span,
+.timer__btn.selected.purple.selected span {
   background-color: #a65fee;
   border-color: #a65fee;
 }
 
-.age__btn.active span {
+.age__btn.selected.active span,
+.timer__btn.selected.active span {
   height: 100%;
 }
 
@@ -762,13 +789,15 @@ input.purple:focus {
   height: 14.6rem;
   margin: 0 1.25rem 2.9rem;
   border-radius: 3rem;
+  background: transparent;
 }
 
-.timer__btn.colorized .timer__name {
+.timer__btn.selected .timer__name {
   height: calc(100% - 0.4rem);
+  color: #fff;
 }
 
-.timer__btn.colorized:after {
+.timer__btn.selected:after {
   content: "";
   display: block;
   position: absolute;
@@ -800,6 +829,8 @@ input.purple:focus {
           align-items: center;
   font-size: 2.1rem;
   font-weight: 700;
+  border: 0.3rem solid #e5e4e7;
+  color: #3d3d5c;
 }
 
 #page_seven .page__title {
@@ -847,8 +878,8 @@ input.purple:focus {
   z-index: 2;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-transform: rotate(-60deg);
-          transform: rotate(-60deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
   stroke-dasharray: 500;
 }
 
@@ -953,6 +984,26 @@ input.purple:focus {
   height: 100%;
   position: relative;
   border-radius: 0.5rem;
+  -webkit-animation: calcProgress 1s linear;
+          animation: calcProgress 1s linear;
+}
+
+@-webkit-keyframes calcProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes calcProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
 }
 
 .level__progress__thumb {
@@ -1549,7 +1600,6 @@ input.purple:focus {
     height: 27.76%;
   }
   .current__page__block {
-    margin-top: 2.15rem;
     font-size: 1.6rem;
   }
   .page__title__block {
