@@ -1107,6 +1107,8 @@ input {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
+    font-size: 0;
+    color: transparent;
     //background-color: #099ff9;
     opacity: 0.5;
     &.slick-active {
@@ -1114,8 +1116,9 @@ input {
       height: 1.8rem;
       opacity: 1;
     }
-    button {
+    button:before {
       font-size: 0;
+      color: transparent;
     }
   }
 }
