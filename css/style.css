@@ -1778,7 +1778,7 @@ input.purple:focus {
   }
 }
 
-@media screen and (max-height: 690px) and (max-width: 415px) {
+@media screen and (max-height: 650px) and (max-width: 415px) {
   .questions__block {
     height: 35vh;
     overflow-y: scroll;
