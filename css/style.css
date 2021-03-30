@@ -1386,6 +1386,10 @@ input.purple:focus {
   opacity: 1;
 }
 
+.slick-dots li button {
+  font-size: 0;
+}
+
 @media screen and (min-height: 1200px) {
   .choose__language__block {
     margin-bottom: 8rem;
