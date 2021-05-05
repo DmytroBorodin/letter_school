@@ -12,6 +12,11 @@ let wrap = document.querySelector(".wrap");
 let colorizedItems = [...document.querySelectorAll(".colorized")];
 let currentPageNumber = null;
 
+window.addEventListener("resize", () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   slickDotsUl = document.querySelector(".slick-dots");
   dotsArr = [...slickDotsUl.querySelectorAll("li")];
