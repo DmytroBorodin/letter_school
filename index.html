@@ -134,6 +134,48 @@
             <div class="progress__bar colorized primary"></div>
           </div>
           <div class="page__title__block">
+            <h2 class="page__title">What's your email?</h2>
+            <p class="page__text">
+              Join over NUMBER others to get access to exclusive content and news.
+            </p>
+          </div>
+          <div class="input__block">
+            <form action="">
+              <input
+                type="text"
+                placeholder="Email"
+                class="name__input colorized primary"
+                id="email__input"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="footer__block">
+          <div class="main__block">
+            <div class="button__wrapper disabled primary colorized">
+              <button class="app__btn primary colorized">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start second page -->
+
+      <div class="wrapper disabled" id="page_two">
+        <div class="header__block">
+          <button class="back__btn">
+            <img src="imgs/back_arrow.svg" alt="" />
+          </button>
+          <div class="current__page__block">
+            <span class="current__page">1</span> /
+            <span class="pages">6</span>
+          </div>
+        </div>
+        <div class="main__block">
+          <div class="progress__bar__block">
+            <div class="progress__bar colorized primary"></div>
+          </div>
+          <div class="page__title__block">
             <h2 class="page__title">What's your child's name?</h2>
             <p class="page__text">
               Help us personalize your child's learning journey! Add your child's name here.
@@ -159,9 +201,9 @@
         </div>
       </div>
 
-      <!-- Start second page -->
+      <!-- Start third page -->
 
-      <div class="wrapper disabled" id="page_two">
+      <div class="wrapper disabled" id="page_three">
         <div class="header__block">
           <button class="back__btn">
             <img src="imgs/back_arrow.svg" alt="" />
@@ -180,12 +222,12 @@
             <p class="page__text">Help us personalize your child's learning journey!</p>
           </div>
           <div class="age__btns__block">
-            <button class="age__btn colorized active primary" tabindex="1"><span>1</span></button>
-            <button class="age__btn colorized primary" tabindex="2"><span>2</span></button>
-            <button class="age__btn colorized primary" tabindex="3"><span>3</span></button>
-            <button class="age__btn colorized primary" tabindex="4"><span>4</span></button>
-            <button class="age__btn colorized primary" tabindex="5"><span>5</span></button>
-            <button class="age__btn colorized primary" tabindex="6"><span>6+</span></button>
+            <button class="age__btn colorized active primary" tabindex="1"><span>3</span></button>
+            <button class="age__btn colorized primary" tabindex="2"><span>4</span></button>
+            <button class="age__btn colorized primary" tabindex="3"><span>5</span></button>
+            <button class="age__btn colorized primary" tabindex="4"><span>6</span></button>
+            <button class="age__btn colorized primary" tabindex="5"><span>7</span></button>
+            <button class="age__btn colorized primary" tabindex="6"><span>8+</span></button>
           </div>
         </div>
         <div class="footer__block">
@@ -197,9 +239,9 @@
         </div>
       </div>
 
-      <!-- Start third page -->
+      <!-- Start fourth page -->
 
-      <div class="wrapper disabled" id="page_three">
+      <div class="wrapper disabled" id="page_four">
         <div class="header__block">
           <button class="back__btn">
             <img src="imgs/back_arrow.svg" alt="" />
@@ -303,9 +345,9 @@
         </div>
       </div>
 
-      <!-- Start fourth page -->
+      <!-- Start fifth page -->
 
-      <div class="wrapper disabled" id="page_four">
+      <div class="wrapper disabled" id="page_five">
         <div class="header__block">
           <button class="back__btn">
             <img src="imgs/back_arrow.svg" alt="" />
@@ -323,20 +365,56 @@
             <h2 class="page__title">What's <span class="child__name"></span>'s learning level?</h2>
           </div>
           <div class="questions__block">
-            <div class="question colorized">
-              <p class="question__text colorized">
-                <span class="child__name"></span> is a beginner and can't recognize letters yet
-              </p>
+            <div class="question selected">
+              <div class="question__text__block">
+                <p class="question__text">
+                  <span class="child__name"></span> is a beginner and can't recognize letters yet
+                </p>
+                <div class="qa__img__block">
+                  <img src="imgs/blue_vertical_arrow.svg" alt="" />
+                </div>
+              </div>
+              <div class="answers__wrapper">
+                <div class="answers__btns__block">
+                  <button class="colorized answer__btn primary">Yes</button>
+                  <button class="colorized answer__btn primary">Maybe</button>
+                  <button class="colorized answer__btn primary">No</button>
+                </div>
+              </div>
             </div>
-            <div class="question colorized">
-              <p class="question__text colorized">
-                <span class="child__name"></span> can recognize some letters and words
-              </p>
+            <div class="question">
+              <div class="question__text__block">
+                <p class="question__text">
+                  <span class="child__name"></span> can recognize some letters and words
+                </p>
+                <div class="qa__img__block">
+                  <img src="imgs/blue_vertical_arrow.svg" alt="" />
+                </div>
+              </div>
+              <div class="answers__wrapper">
+                <div class="answers__btns__block">
+                  <button class="colorized answer__btn primary">Yes</button>
+                  <button class="colorized answer__btn primary">Maybe</button>
+                  <button class="colorized answer__btn primary">No</button>
+                </div>
+              </div>
             </div>
-            <div class="question colorized">
-              <p class="question__text colorized">
-                <span class="child__name"></span> can recognize simple words and phrases
-              </p>
+            <div class="question">
+              <div class="question__text__block">
+                <p class="question__text">
+                  <span class="child__name"></span> can recognize simple words and phrases
+                </p>
+                <div class="qa__img__block">
+                  <img src="imgs/blue_vertical_arrow.svg" alt="" />
+                </div>
+              </div>
+              <div class="answers__wrapper">
+                <div class="answers__btns__block">
+                  <button class="colorized answer__btn primary">Yes</button>
+                  <button class="colorized answer__btn primary">Maybe</button>
+                  <button class="colorized answer__btn primary">No</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -349,9 +427,9 @@
         </div>
       </div>
 
-      <!-- Start fifth page -->
+      <!-- Start sixth page -->
 
-      <div class="wrapper disabled" id="page_five">
+      <div class="wrapper disabled" id="page_six">
         <div class="header__block">
           <button class="back__btn">
             <img src="imgs/back_arrow.svg" alt="" />
@@ -394,49 +472,6 @@
         <div class="footer__block">
           <div class="main__block">
             <div class="button__wrapper primary colorized">
-              <button class="app__btn primary colorized">Next</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Start sixth page -->
-
-      <div class="wrapper disabled" id="page_six">
-        <div class="header__block">
-          <button class="back__btn">
-            <img src="imgs/back_arrow.svg" alt="" />
-          </button>
-        </div>
-        <div class="main__block">
-          <div class="current__page__block">
-            <span class="current__page"></span> /
-            <span class="pages"></span>
-          </div>
-          <div class="progress__bar__block">
-            <div class="progress__bar colorized primary"></div>
-          </div>
-          <div class="page__title__block">
-            <h2 class="page__title">How often do you want your kid to learn new letters?</h2>
-          </div>
-          <div class="timer__block">
-            <button class="timer__btn colorized primary">
-              <span class="timer__name"> 5 min / day </span>
-            </button>
-            <button class="timer__btn colorized primary">
-              <span class="timer__name"> 10 min / day </span>
-            </button>
-            <button class="timer__btn colorized primary">
-              <span class="timer__name"> 15 min / day </span>
-            </button>
-            <button class="timer__btn colorized primary">
-              <span class="timer__name"> 20 min / day </span>
-            </button>
-          </div>
-        </div>
-        <div class="footer__block">
-          <div class="main__block">
-            <div class="button__wrapper disabled primary colorized">
               <button class="app__btn primary colorized">Next</button>
             </div>
           </div>
@@ -519,11 +554,222 @@
               </div>
             </div>
           </div>
+          <div class="main__content">
+            <h2 class="page__title">Subjects covered</h2>
+            <ul class="subjects__list">
+              <li class="subject__item">
+                <div class="subject__img__block">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                  >
+                    <g id="ic-actions-emultiple-edit" transform="translate(-1.52 -0.954)">
+                      <path
+                        id="Path_15"
+                        class="primary"
+                        data-name="Path 15"
+                        d="M28.464,15.781v8.446a3.088,3.088,0,0,1-3.2,2.964H8.919a3.088,3.088,0,0,1-3.2-2.964V4.964A3.088,3.088,0,0,1,8.919,2h9.437"
+                        transform="translate(1.918 0.022)"
+                        fill="none"
+                        stroke="#099ff9"
+                        stroke-linecap="round"
+                        stroke-linejoin="bevel"
+                        stroke-width="2"
+                      />
+                      <path
+                        id="Path_16"
+                        class="primary"
+                        data-name="Path 16"
+                        d="M25.248,26.116v1.778a3.088,3.088,0,0,1-3.2,2.964H5.719a3.088,3.088,0,0,1-3.2-2.964V7.194a3.088,3.088,0,0,1,3.2-2.964H7.638"
+                        transform="translate(0 1.096)"
+                        fill="none"
+                        stroke="#099ff9"
+                        stroke-linecap="round"
+                        stroke-linejoin="bevel"
+                        stroke-width="2"
+                      />
+                      <path
+                        id="Path_17"
+                        class="primary"
+                        data-name="Path 17"
+                        d="M23.808,2.393a1.69,1.69,0,0,0-2.271,0l-9.6,8.891h0l-.16,4.445a.3.3,0,0,0,.1.241.352.352,0,0,0,.265.085l4.8-.148h0l9.6-8.891a1.4,1.4,0,0,0-.016-2.03Z"
+                        transform="translate(5.551 0)"
+                        fill="none"
+                        stroke="#099ff9"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <p class="item__text">
+                  <span class="primary">Handwriting:</span> Awarded as best handwriting app. Proven
+                  by scientists
+                </p>
+              </li>
+              <li class="subject__item">
+                <div class="subject__img__block">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="27"
+                    viewBox="0 0 32 27"
+                  >
+                    <g id="ic-layout-content-left" transform="translate(-2 -8.667)">
+                      <line
+                        id="Line_252"
+                        data-name="Line 252"
+                        class="primary"
+                        x2="10"
+                        transform="translate(23 11.452)"
+                        fill="none"
+                        stroke="#099ff9"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <line
+                        id="Line_253"
+                        data-name="Line 253"
+                        class="primary"
+                        x2="6.667"
+                        transform="translate(23 18.595)"
+                        fill="none"
+                        stroke="#099ff9"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <line
+                        id="Line_254"
+                        data-name="Line 254"
+                        class="primary"
+                        x2="6.667"
+                        transform="translate(23 25.738)"
+                        fill="none"
+                        stroke="#099ff9"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <line
+                        id="Line_255"
+                        data-name="Line 255"
+                        class="primary"
+                        x2="6.667"
+                        transform="translate(23 32.881)"
+                        fill="none"
+                        stroke="#099ff9"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <rect
+                        id="Rectangle_65"
+                        data-name="Rectangle 65"
+                        class="primary"
+                        width="13.333"
+                        height="25"
+                        rx="2"
+                        transform="translate(3 9.667)"
+                        fill="none"
+                        stroke="#099ff9"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <p class="item__text">
+                  <span class="primary">Spelling & Reading:</span> from letter to words, from words
+                  to sentences.
+                </p>
+              </li>
+              <li class="subject__item">
+                <div class="subject__img__block">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="31.188"
+                    height="30"
+                    viewBox="0 0 31.188 30"
+                  >
+                    <g id="Group_289" data-name="Group 289" transform="translate(-32 -449)">
+                      <text
+                        id="A"
+                        transform="translate(32 473)"
+                        class="primary"
+                        fill="#099ff9"
+                        font-size="22"
+                        font-family="SegoeUI-Bold, Segoe UI"
+                        font-weight="700"
+                      >
+                        <tspan x="0" y="0">A</tspan>
+                      </text>
+                      <g
+                        id="Group_288"
+                        data-name="Group 288"
+                        transform="translate(62 458.5) rotate(90)"
+                      >
+                        <path
+                          id="Path_263"
+                          data-name="Path 263"
+                          class="primary"
+                          d="M0,1.886a10.071,10.071,0,0,1,11.735,0"
+                          transform="translate(1.132 4.902)"
+                          fill="none"
+                          stroke="#099ff9"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          id="Path_264"
+                          data-name="Path 264"
+                          class="primary"
+                          d="M0,.675a10.223,10.223,0,0,1,7.307,0"
+                          transform="translate(3.331 9.325)"
+                          fill="none"
+                          stroke="#099ff9"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          id="Path_447"
+                          data-name="Path 447"
+                          class="primary"
+                          d="M0,2.8C4.428-.934,9.572-.934,14,2.8"
+                          transform="translate(0 0)"
+                          fill="none"
+                          stroke="#099ff9"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <p class="item__text">
+                  <span class="primary">Phonics:</span> Identify and use different sounds that
+                  distinguish one word from another.
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="footer__block">
           <div class="main__block">
-            <div class="button__wrapper primary colorized">
-              <button class="app__btn primary colorized">Next</button>
+            <div class="button__wrapper full__width__btn primary">
+              <button class="app__btn primary">Continue</button>
+            </div>
+            <div class="main__footer__text">
+              By continuing, you agree to our <a href="#">Terms of Service</a> and
+              <a href="#">Privacy Policy</a>.
             </div>
           </div>
         </div>
@@ -534,66 +780,177 @@
       <div class="wrapper disabled" id="page_nine">
         <div class="header__block">
           <button class="back__btn">
-            <img src="imgs/white_arrow.svg" alt="" />
+            <img src="imgs/back_arrow.svg" alt="" />
+          </button>
+          <button class="close__btn">
+            <img src="imgs/close_btn.svg" alt="" />
           </button>
         </div>
         <div class="main__block">
           <div class="page__title__block">
-            <h2 class="page__title">Choose a plan for after your 7-day free trial</h2>
+            <h2 class="page__title">How your free trial works</h2>
           </div>
-          <div class="plans__block">
-            <div class="plan__wrapper">
-              <div class="plan__block">
-                <div class="period__block">
-                  <span class="monthes main__text">1</span>
-                  <span class="main__text">Month</span>
-                </div>
-                <div class="price__block">
-                  <span class="prev__rice main__text disabled"></span>
-                  <span class="actual__price main__text">$4.99 / mo.</span>
-                </div>
-              </div>
+          <div class="trial__main__block">
+            <div class="trial__widget__block">
+              <div class="main__thumbnail"></div>
             </div>
-            <div class="plan__wrapper active most__chosen">
-              <div class="plan__block">
-                <div class="plan__header">
-                  <span class="main__text">Most Chosen</span>
-                </div>
-                <div class="plan__body">
-                  <div class="period__block">
-                    <span class="monthes main__text">6</span>
-                    <span class="main__text">Monthes</span>
-                  </div>
-                  <div class="price__block">
-                    <span class="prev__rice disabled main__text">$29.94</span>
-                    <span class="actual__price main__text">$24.99</span>
-                  </div>
-                </div>
+            <div class="trial__list__block">
+              <div class="trial__item">
+                <h3 class="trial__title">Today</h3>
+                <p class="trial_text">
+                  Unlock your child's full potential with complete learning content.
+                </p>
               </div>
-            </div>
-            <div class="plan__wrapper">
-              <div class="plan__block">
-                <div class="period__block">
-                  <span class="monthes main__text">12</span>
-                  <span class="main__text">Monthes</span>
-                </div>
-                <div class="price__block">
-                  <span class="prev__rice main__text disabled">$59.88</span>
-                  <span class="actual__price main__text">$44.99 / yr</span>
-                </div>
+              <div class="trial__item">
+                <h3 class="trial__title">Day 7</h3>
+                <p class="trial_text">You'll be charged at day 7, cancel anytime before.</p>
               </div>
             </div>
           </div>
+          <ul class="trial__list">
+            <li class="trial__list__item">
+              <div class="item__label">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.938"
+                  height="11.696"
+                  viewBox="0 0 17.938 11.696"
+                >
+                  <g id="ic-actions-check-simple" transform="translate(-3.029 -5.844)">
+                    <path
+                      id="Path_8"
+                      data-name="Path 8"
+                      d="M5.15,11.64l4.41,4.4,9.29-8.08"
+                      fill="none"
+                      class="primary"
+                      stroke="#099ff9"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      fill-rule="evenodd"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <p class="trial__item__text">Unlock complete learning content</p>
+            </li>
+            <li class="trial__list__item">
+              <div class="item__label">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.938"
+                  height="11.696"
+                  viewBox="0 0 17.938 11.696"
+                >
+                  <g id="ic-actions-check-simple" transform="translate(-3.029 -5.844)">
+                    <path
+                      id="Path_8"
+                      data-name="Path 8"
+                      d="M5.15,11.64l4.41,4.4,9.29-8.08"
+                      fill="none"
+                      class="primary"
+                      stroke="#099ff9"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      fill-rule="evenodd"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <p class="trial__item__text">Learn your kid writing and spelling!</p>
+            </li>
+            <li class="trial__list__item">
+              <div class="item__label">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.938"
+                  height="11.696"
+                  viewBox="0 0 17.938 11.696"
+                >
+                  <g id="ic-actions-check-simple" transform="translate(-3.029 -5.844)">
+                    <path
+                      id="Path_8"
+                      data-name="Path 8"
+                      d="M5.15,11.64l4.41,4.4,9.29-8.08"
+                      fill="none"
+                      class="primary"
+                      stroke="#099ff9"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      fill-rule="evenodd"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <p class="trial__item__text">Play over 150+ games</p>
+            </li>
+            <li class="trial__list__item">
+              <div class="item__label">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.938"
+                  height="11.696"
+                  viewBox="0 0 17.938 11.696"
+                >
+                  <g id="ic-actions-check-simple" transform="translate(-3.029 -5.844)">
+                    <path
+                      id="Path_8"
+                      data-name="Path 8"
+                      d="M5.15,11.64l4.41,4.4,9.29-8.08"
+                      fill="none"
+                      class="primary"
+                      stroke="#099ff9"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      fill-rule="evenodd"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <p class="trial__item__text">Supplementary school materials</p>
+            </li>
+            <li class="trial__list__item">
+              <div class="item__label">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.938"
+                  height="11.696"
+                  viewBox="0 0 17.938 11.696"
+                >
+                  <g id="ic-actions-check-simple" transform="translate(-3.029 -5.844)">
+                    <path
+                      id="Path_8"
+                      data-name="Path 8"
+                      d="M5.15,11.64l4.41,4.4,9.29-8.08"
+                      fill="none"
+                      class="primary"
+                      stroke="#099ff9"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      fill-rule="evenodd"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <p class="trial__item__text">10 years leading award winning writing app</p>
+            </li>
+          </ul>
         </div>
         <div class="footer__block">
           <div class="main__block">
-            <p class="footer__text">Cancel anytime in the App Store</p>
-            <div class="button__wrapper primary full__width__btn">
-              <button class="app__btn primary">Get Started</button>
+            <p class="footer__title__text">7-day free trial, then</p>
+            <p class="footer__title__text"><span>$22.99 per year</span> ($ 1.92/month)</p>
+            <div class="button__wrapper full__width__btn primary">
+              <button class="app__btn primary">Start 7-day free trial</button>
             </div>
-            <button class="cancel__btn">
-              <p class="footer__text">No Thanks</p>
-            </button>
+            <a href="#" class="plans__link">View all plans</a>
+            <div class="main__footer__text">
+              Cancel subscription up to 24h before trial ends. You will only be charged after 7 days
+            </div>
           </div>
         </div>
       </div>
@@ -603,14 +960,89 @@
       <div class="wrapper disabled" id="page_ten">
         <div class="header__block">
           <button class="back__btn">
-            <img src="imgs/white_arrow.svg" alt="" />
+            <img src="imgs/back_arrow.svg" alt="" />
+          </button>
+          <button class="close__btn">
+            <img src="imgs/close_btn.svg" alt="" />
           </button>
         </div>
         <div class="main__block">
-          <div class="main__img__block">
-            <img src="" alt="" class="main__img" />
-          </div>
           <div class="page__title__block">
+            <h2 class="page__title">Choose a plan for after your 7-day FREE trial</h2>
+            <p class="title__text">
+              The #1 handwriting and spelling apps for OTs, teachers & parents! An award-winning app
+              loved and played by over 500,000 kids!
+            </p>
+            <div class="img__block">
+              <img src="imgs/icon_1_p10.png" alt="" />
+              <img src="imgs/icon_2_p10.png" alt="" />
+              <img src="imgs/icon_3_p10.png" alt="" />
+            </div>
+          </div>
+          <div class="plans__block">
+            <div class="plan__wrapper">
+              <div class="plan__block">
+                <p class="top__text">1 month</p>
+                <div class="middle__block">
+                  <p class="price__text">$ 2.99</p>
+                  <p class="sub__text">billed monthly</p>
+                </div>
+                <div class="bottom__block">
+                  <p class="price__text">$ 2.99</p>
+                  <p class="price__text">per month</p>
+                </div>
+              </div>
+            </div>
+            <div class="plan__wrapper active">
+              <div class="plan__block">
+                <p class="header__text">SPECIAL OFFER</p>
+                <p class="top__text">1 year</p>
+                <div class="middle__block">
+                  <p class="price__text">$ 22.99</p>
+                  <p class="sub__text">billed yearly</p>
+                </div>
+                <div class="bottom__block">
+                  <p class="price__text">$ 1.92</p>
+                  <p class="price__text">per month</p>
+                </div>
+              </div>
+            </div>
+            <div class="plan__wrapper">
+              <div class="plan__block">
+                <p class="top__text">6 months</p>
+                <div class="middle__block">
+                  <p class="price__text">$ 13.99</p>
+                  <p class="sub__text">billed monthly</p>
+                </div>
+                <div class="bottom__block">
+                  <p class="price__text">$ 2.3</p>
+                  <p class="price__text">per month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__block">
+          <div class="main__block">
+            <p class="footer__title__text">7-day free trial, then</p>
+            <p class="footer__title__text"><span>$22.99 per year</span> ($ 1.92/month)</p>
+            <div class="button__wrapper full__width__btn primary">
+              <button class="app__btn primary">Start 7-day free trial</button>
+            </div>
+            <a href="#" class="plans__link">Restore</a>
+            <div class="main__footer__text">
+              Cancel subscription up to 24h before trial ends. You will only be charged after 7 days
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start eleventh page -->
+
+      <div class="wrapper disabled" id="page_eleven">
+        <div class="main__block">
+          <div class="page__title__block">
+            <div class="page__title">Here we go!</div>
             <h2 class="page__title">
               Now it's time for <span class="child__name"></span> to learn some new letters! Let's
               start with his first letter, <span class="child__name__start__letter"></span>!
@@ -618,9 +1050,13 @@
           </div>
         </div>
         <div class="footer__block">
-          <div class="main__block">
-            <div class="button__wrapper primary full__width__btn">
-              <button class="app__btn primary">Start Learning Journey</button>
+          <div class="footer__wrapper">
+            <div class="ellipse__block"></div>
+            <div class="main__footer__block"></div>
+            <div class="main__block">
+              <div class="button__wrapper full__width__btn">
+                <button class="app__btn">Start Learning Journey</button>
+              </div>
             </div>
           </div>
         </div>

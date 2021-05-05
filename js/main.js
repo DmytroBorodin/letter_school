@@ -70,10 +70,13 @@ pageCounters.forEach((counter) => {
 });
 console.log(pageCounters);
 
+let emailInput = document.getElementById("email__input");
 let childNameInput = document.getElementById("child__name__input");
 let childNameBlocks = [...document.querySelectorAll(".child__name")];
 let childNameVal = null;
 let firstLetter = null;
+
+let inputs = [emailInput, childNameInput];
 
 childNameInput.addEventListener("focusout", (e) => {
   childNameVal = e.target.value;
@@ -83,12 +86,15 @@ childNameInput.addEventListener("focusout", (e) => {
     block.innerText = e.target.value;
   });
 });
-childNameInput.addEventListener("input", (e) => {
-  console.log(currentPageNumber);
-  e.target.value === "" ? false : appBtnsWraps[currentPageNumber].classList.remove("disabled");
+
+inputs.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    console.log(currentPageNumber);
+    e.target.value === "" ? false : appBtnsWraps[currentPageNumber].classList.remove("disabled");
+  });
 });
 
-// second page settings
+// third page settings
 
 let ageBtns = [...document.querySelectorAll(".age__btn")];
 let pageNum = +document.querySelector(".current__page").innerText;
@@ -108,7 +114,7 @@ ageBtns.forEach((btn) => {
   });
 });
 
-// third page settings
+// fourth page settings
 
 let langBlocks = [...document.querySelectorAll(".language__block")];
 
@@ -126,29 +132,66 @@ langBlocks.forEach((langBlock) => {
   });
 });
 
-// fourth page settings
+// fifth page settings
 
 let qaBlocks = [...document.querySelectorAll(".question")];
-let colorClass = "primary";
-let prevColorClassesCopy = ["primary"];
 
-function toggleQuestionClasses(item) {
-  item.classList.toggle("selected");
-  item.classList.toggle(colorClass);
-  item.classList.remove(prevColorClassesCopy[0]);
+let answersArr = [];
+
+function createAnswerObj(index, answer) {
+  let answerObj = {
+    index,
+    answer,
+  };
+
+  if (!answersArr.length) {
+    answersArr.push(answerObj);
+  } else {
+    for (let i = 0; i < answersArr.length; i++) {
+      if (answersArr.length < 3) {
+        answerObj.index === answersArr[i].index
+          ? (answersArr[i].answer = answerObj.answer)
+          : answersArr.push(answerObj);
+      } else {
+        answerObj.index === answersArr[i].index
+          ? (answersArr[i].answer = answerObj.answer)
+          : answersArr[i].answer;
+      }
+    }
+  }
+  console.log(answersArr);
 }
 
 qaBlocks.forEach((block) => {
-  block.addEventListener("click", () => {
-    qaBlocks.forEach((qaBlock) => {
-      qaBlock.classList.remove("selected");
-      let blockText = qaBlock.querySelector(".question__text");
-      blockText.classList.remove("selected");
+  let btns = [...block.querySelectorAll(".answer__btn")];
+  let index = null;
+
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btns.forEach((btn) => btn.classList.remove("selected"));
+      btn.classList.add("selected");
+      let answer = btn.innerText;
+      createAnswerObj(index, answer);
+      block.classList.remove("selected");
+      block.style.height = "auto";
+      block.style.opacity = "100%";
+
+      if (index + 1 < qaBlocks.length) {
+        qaBlocks[index + 1].classList.add("selected");
+      }
+      if (answersArr.length === 3) {
+        appBtnsWraps[currentPageNumber].classList.remove("disabled");
+      }
     });
-    let blockText = block.querySelector(".question__text");
-    toggleQuestionClasses(block);
-    toggleQuestionClasses(blockText);
-    appBtnsWraps[currentPageNumber].classList.remove("disabled");
+  });
+
+  block.addEventListener("mouseover", () => {
+    index = qaBlocks.indexOf(block);
+    qaBlocks.forEach((block) => block.classList.remove("active"));
+    block.classList.add("active");
+  });
+  block.addEventListener("mouseout", () => {
+    block.classList.remove("active");
   });
 });
 
@@ -200,18 +243,6 @@ changeColorBtns.forEach((btn) => {
 });
 
 // page six settings
-
-let timerBtns = [...document.querySelectorAll(".timer__btn")];
-
-timerBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    timerBtns.forEach((btn) => {
-      btn.classList.remove("selected");
-    });
-    btn.classList.add("selected");
-    appBtnsWraps[currentPageNumber].classList.remove("disabled");
-  });
-});
 
 // page seven settings
 
