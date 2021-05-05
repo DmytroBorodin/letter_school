@@ -306,12 +306,12 @@ input {
     }
   }
   &.disabled {
-    opacity: 40%;
+    opacity: 0.4;
     &:before {
-      opacity: 40%;
+      opacity: 0.4;
     }
     .app__btn {
-      opacity: 40%;
+      opacity: 0.4;
     }
   }
 }
@@ -526,7 +526,7 @@ input {
       transform: scaleY(1);
     }
     .question__text {
-      opacity: 100%;
+      opacity: 1;
     }
     .answer__btn {
       height: 4.3rem;
@@ -535,10 +535,10 @@ input {
     }
   }
   &.selected {
-    opacity: 100%;
+    opacity: 1;
     height: auto;
     .question__text {
-      opacity: 100%;
+      opacity: 1;
     }
     .answers__wrapper {
       transform: scaleY(1);
@@ -569,7 +569,7 @@ input {
   font-size: 1.8rem;
   line-height: 2.6rem;
   font-weight: 700;
-  opacity: 40%;
+  opacity: 0.4;
 }
 .answers__wrapper {
   transform-origin: top;
